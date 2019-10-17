@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Speech to Text Survey</title>
+
+  <link href="favicon.png" rel="icon" type="image/png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js" integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
+</head>
+<body class="bg-secondary">
+  <div class="alert alert-danger collapse m-4" role="alert"></div>
+
+  <div class="container d-flex flex-column align-items-center justify-content-center"
+       style="height: 100vh">
+    <div class="d-flex flex-column bg-light p-4 border rounded shadow"
+         style="width: 400px">
+      <select class="custom-select mb-4"
+              id="voices"></select>
+
+      <button class="btn btn-primary btn-lg"
+              type="button"
+              disabled>
+        Start Speech to Text Survey
+      </button>
+
+      <div class="score-container pt-3 mt-4 border-top collapse">
+        <label>Score</label>
+        <input type="number" class="form-control" id="score" min="0" max="10">
+      </div>
+
+      <div class="comment-container mt-4 collapse">
+        <label>Comment</label>
+        <textarea class="form-control p-2" id="comment"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
